@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario CURP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            text-align: center;
+        }
+
+        input[readonly] {
+            background-color: #eaeaea;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Formulario CURP</h2>
+        <form>
+            <label for="curp">CURP:</label>
+            <input type="text" id="curp" maxlength="18" oninput="completarNombre()" required>
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" readonly>
+
+            <label for="apellidoP">Apellido Paterno:</label>
+            <input type="text" id="apellidoP" readonly>
+
+            <label for="apellidoM">Apellido Materno:</label>
+            <input type="text" id="apellidoM" readonly>
+        </form>
+    </div>
+
+</body>
+</html>
